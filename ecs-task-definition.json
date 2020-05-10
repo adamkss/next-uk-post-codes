@@ -1,0 +1,24 @@
+{
+    "family": "next-uk-post-codes",
+    "executionRoleArn": "arn:aws:iam::026079580296:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+        {
+            "name": "next-uk-post-codes",
+            "image": "026079580296.dkr.ecr.us-east-2.amazonaws.com/next-uk-post-codes:latest",
+            "portMappings": [
+                {
+                    "containerPort": 3000,
+                    "hostPort": 3000,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "512",
+    "memory": "1024"
+}
